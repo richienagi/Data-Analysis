@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr 10 18:58:42 2021
+
+FreeCodeCamp Data Analysis with Python Projects - Demographic Data Analyzer
+"""
+
+import numpy as np
+import pandas as pd
+
+df = pd.read_csv('adultdemographicdata.csv')
+
+print(df['race'].value_counts())
+print('')
+print(round(df.loc[df['sex'] == 'Male','age'].mean(),1))
+print('')
+print(round(df['education'].value_counts(normalize=True)['Bachelors']*100,1))
+print('')
+print(round(((df.loc[((df['education'] == 'Bachelors') | (df['education'] == 'Masters') | (df['education'] == 'Doctorate')) & (df['salary'] == '>50K')].shape[0])/(df.loc[(df['education'] == 'Bachelors') | (df['education'] == 'Masters') | (df['education'] == 'Doctorate')].shape[0]))*100,1))
+print('')
+print(round(((df.loc[((df['education'] != 'Bachelors') & (df['education'] != 'Masters') & (df['education'] != 'Doctorate')) & (df['salary'] == '>50K')].shape[0])/(df.loc[(df['education'] != 'Bachelors') & (df['education'] != 'Masters') & (df['education'] != 'Doctorate')].shape[0]))*100,1))
+print('')
+print(df['hours-per-week'].min())
+print('')
+print(int(((df.loc[(df['hours-per-week'] == df['hours-per-week'].min()) & (df['salary'] == '>50K')].shape[0])/(df.loc[df['hours-per-week'] == df['hours-per-week'].min()].shape[0]))*100))
+print('')
+print((df.loc[df['salary'] == '>50K','native-country'].value_counts()/df['native-country'].value_counts()).idxmax())
+print('')
+print(round(((df.loc[df['salary'] == '>50K','native-country'].value_counts()/df['native-country'].value_counts()).max())*100,1))
+print('')
+print(df.loc[((df['salary'] == '>50K') & (df['native-country'] == 'India')),'occupation'].value_counts().idxmax())
