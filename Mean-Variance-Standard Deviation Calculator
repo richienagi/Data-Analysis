@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr  4 19:34:27 2021
+
+FreeCodeCamp Data Analysis with Python Projects - Mean-Variance-Standard Deviation Calculator
+"""
+
+import numpy as np
+
+inputList = [0,1,2,3,4,5,6,7,8]
+
+if len(inputList) < 9:
+    raise ValueError("ValueError exception thrown")
+inputArray = np.reshape(inputList,(3,3))
+
+returnedDict = dict()
+
+
+returnedDict['mean'] = [list(inputArray.mean(axis=0)),list(inputArray.mean(axis=1)),inputArray.mean()]
+returnedDict['variance'] = [list(inputArray.var(axis=0)),list(inputArray.var(axis=1)),inputArray.var()]
+returnedDict['standard deviation'] = [list(inputArray.std(axis=0)),list(inputArray.std(axis=1)),inputArray.std()]
+returnedDict['max'] = [list(np.amax(inputArray,axis=0)),list(np.amax(inputArray,axis=1)),np.amax(inputArray)]
+returnedDict['min'] = [list(np.amin(inputArray,axis=0)),list(np.amin(inputArray,axis=1)),np.amin(inputArray)]
+returnedDict['sum'] = [list(inputArray.sum(axis=0)),list(inputArray.sum(axis=1)),inputArray.sum()]
+
+#print(inputArray.var(axis=0),inputArray.var(axis=1),inputArray.var())
+#print(inputArray.std(axis=0),inputArray.std(axis=1),inputArray.std())
+#print(np.amax(inputArray,axis=0),np.amax(inputArray,axis=1),np.amax(inputArray))
+#print(np.amin(inputArray,axis=0),np.amin(inputArray,axis=1),np.amin(inputArray))
+#print(inputArray.sum(axis=0),inputArray.sum(axis=1),inputArray.sum())
