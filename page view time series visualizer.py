@@ -4,6 +4,7 @@
 Created on Sat Apr 24 19:18:59 2021
 
 @author: richie
+FreeCodeCamp Data Analysis with Python Projects - Page View Time Series Visualizer
 """
 
 import numpy as np
