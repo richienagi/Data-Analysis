@@ -4,6 +4,9 @@
 Created on Sun May  2 12:12:51 2021
 
 @author: richie
+
+FreeCodeCamp Scientific Computing with Python Projects - Arithmatic Formatter
+
 """
 
 def arithmetic_arranger(inputList,printResults=False):
