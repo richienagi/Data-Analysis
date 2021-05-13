@@ -4,6 +4,7 @@
 Created on Sun May  9 17:46:37 2021
 
 @author: richie
+FreeCodeCamp Scientific Computing with Python Projects - Time Calculator
 """
 
 
