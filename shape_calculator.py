@@ -4,6 +4,7 @@
 Created on Fri May 14 17:51:10 2021
 
 @author: richie
+FreeCodeCamp Scientific Computing with Python Projects - Polygon Area Calculator
 """
 
 class Rectangle:
